@@ -94,6 +94,8 @@ h2{font-size:clamp(1.9rem,4.4vw,3.1rem);max-width:16ch;}
 .device-mock .blocks i:nth-child(2){width:70%}
 .device-mock .blocks i:nth-child(3){width:85%}
 .device-mock .blocks i.tall{height:70px;opacity:.35;margin-top:.3rem;}
+.project-img{width:100%;height:auto;border-radius:14px;border:1px solid var(--border);aspect-ratio:16/9;object-fit:cover;display:block;}
+.project-card .project-img{aspect-ratio:4/3;}
 .project-index{font-family:var(--mono);color:var(--blue);font-size:.8rem;}
 .project-featured h3{font-size:clamp(1.6rem,3vw,2.2rem);margin-top:.4rem;}
 .project-featured p, .project-card p{color:var(--ink-dim);margin-top:.7rem;max-width:46ch;}
@@ -293,7 +295,7 @@ if(isTouch) document.body.classList.add('no-cursor');
 
 /* ---------- DATA ---------- */
 var projects = [
-  {id:'mykirana',featured:true,index:'01',title:'MY KIRANA',
+  {id:'mykirana',featured:true,index:'01',title:'MY KIRANA', image:'ui in laptop.png',
    desc:"A product I'm building to make local kirana shopping more organized and reduce customer crowd and waiting at the shop.",
    role:'Founder · Developer · Marketer',tech:'Next.js',status:'In Progress',statusClass:'in-progress',
    live:'https://my-kirana.netlify.app',github:'Private',
@@ -303,7 +305,7 @@ var projects = [
          ['THE BUILD',"Built end-to-end on Next.js, deployed and iterated on in the open."],
          ['THE RESULT',"Still early — live and evolving. No metrics to report yet."],
          ['STATUS',"In Progress"]]},
-  {id:'adnovaa',index:'02',title:'ADNOVAA',
+  {id:'adnovaa',index:'02',title:'ADNOVAA', image:'adnovaa ui.png',
    desc:"A platform helping local brands with websites, SaaS applications, software services, and digital presence.",
    role:'Builder · Developer',tech:'Websites · SaaS',status:'Active',statusClass:'active',
    case:[['THE IDEA',"Local brands often need a real digital presence but don't have an in-house team to build one."],
@@ -312,12 +314,12 @@ var projects = [
          ['THE BUILD',"Practical, client-facing development, start to finish."],
          ['THE RESULT',"Ongoing — case details added as projects wrap up."],
          ['STATUS',"Active"]]},
-  {id:'clientwork',index:'03',title:'CLIENT WORK',
-   desc:"A visual collection of real websites shipped for real clients — practical requirements, real deadlines.",
+  {id:'clientwork',index:'03',title:'CLIENT WORKS',
+   desc:"Providing customized software, applications, and websites. I have shipped websites to 5 businesses so far: Gym, Photo Studio, Makeup Studio, Mobile Shop, and Cafe — and still counting.",
    role:'Freelance Developer',tech:'Various',status:'Delivered',statusClass:'delivered',
-   case:[['THE IDEA',"Not every project is a personal experiment — some are just websites people needed built."],
-         ['THE PROBLEM',"Small businesses and individuals need working websites without unnecessary overhead."],
-         ['THE APPROACH',"Take the brief, build it, ship it — repeat."],
+   case:[['SERVICES',"Customized software, applications, and websites."],
+         ['PREVIOUS WORK',"Gym, Photo Studio, Makeup Studio, Mobile Shop, Cafe, and still counting."],
+         ['THE APPROACH',"Take the brief, understand the business requirements, build it, ship it — repeat."],
          ['THE BUILD',"5+ websites delivered across different client requirements."],
          ['THE RESULT',"5+ client websites delivered and live."],
          ['STATUS',"Delivered"]]},
@@ -333,7 +335,7 @@ var projects = [
 ];
 var stats = [['18','Years old'],['5+','Client websites delivered'],['1','Startup currently building'],['∞','Things I want to build']];
 var timeline = [
-  ['FREELANCE / CLIENT WORK','5+ client websites delivered','Real requirements, real deadlines — websites shipped for real clients, start to finish.'],
+  ['FREELANCE / CLIENT WORKS','5+ client websites delivered','Providing customized software, applications, and websites for businesses like Gyms, Studios, Cafes, and more.'],
   ['ADNOVAA · BUILDER / DEVELOPER','Helping local brands go digital','Websites, SaaS applications and software services for local brands.'],
   ['MY KIRANA · FOUNDER · DEVELOPER · MARKETER','Building a product from scratch','Designing, building and marketing a product for local kirana stores.']
 ];
@@ -345,7 +347,7 @@ function mockBlocks(){return '<div class="device-mock"><div class="dots"><span><
 function caseHTML(rows){return rows.map(function(r){return '<div><b>'+r[0]+'</b><span>'+r[1]+'</span></div>';}).join('');}
 
 function renderFeatured(p){
-  return '<div class="project-featured reveal">'+mockBlocks()+
+  return '<div class="project-featured reveal">'+(p.image?'<img src="'+p.image+'" alt="'+p.title+'" class="project-img">':mockBlocks())+
   '<div><span class="project-index">'+p.index+'</span><h3>'+p.title+'</h3><p>'+p.desc+'</p>'+
   '<div class="meta-row"><span>'+p.role+'</span><span>'+p.tech+'</span><span class="status '+p.statusClass+'">'+p.status+'</span></div>'+
   '<div class="project-links">'+(p.live?'<a href="'+p.live+'" target="_blank" rel="noopener">Live ↗</a>':'')+(p.github?'<span>GitHub · '+p.github+'</span>':'')+'</div>'+
@@ -354,7 +356,7 @@ function renderFeatured(p){
   '</div></div>';
 }
 function renderCard(p){
-  return '<div class="project-card reveal">'+mockBlocks()+
+  return '<div class="project-card reveal">'+(p.image?'<img src="'+p.image+'" alt="'+p.title+'" class="project-img">':mockBlocks())+
   '<h3>'+p.title+'</h3><p>'+p.desc+'</p>'+
   '<div class="meta-row"><span>'+p.role+'</span><span class="status '+p.statusClass+'">'+p.status+'</span></div>'+
   '<button class="details-btn" aria-expanded="false" data-case="'+p.id+'">View details</button>'+
@@ -511,7 +513,7 @@ if(window.THREE){
   setInterval(function(){
     [eyeL,eyeR].forEach(function(e){ e.userData.pupil.scale.y=.15; });
     setTimeout(function(){[eyeL,eyeR].forEach(function(e){ e.userData.pupil.scale.y=1; });},110);
-  }, 3200+Math.random()*2000);
+  }, 3000);
 
   var clock=new THREE.Clock();
   function animate(){
@@ -525,11 +527,11 @@ if(window.THREE){
       camera.lookAt(isMobile?0:0.7,-.1,0);
       particles.rotation.y=t*.02;
     }
-    curY+=(targetY-curY)*.06; curX+=(targetX-curX)*.06;
+    curY+=(targetY-curY)*.15; curX+=(targetX-curX)*.15;
     neck.rotation.y=curY; neck.rotation.x=curX;
-    eyeCurX+=(targetY*.55-eyeCurX)*.15; eyeCurY+=(targetX*.4-eyeCurY)*.15;
-    eyeL.rotation.y=eyeCurX; eyeR.rotation.y=eyeCurX;
-    eyeL.rotation.x=eyeCurY; eyeR.rotation.x=eyeCurY;
+    eyeCurX+=(targetY*0.12-eyeCurX)*.35; eyeCurY+=(targetX*0.25-eyeCurY)*.35;
+    eyeL.userData.pupil.position.x = eyeCurX; eyeR.userData.pupil.position.x = eyeCurX;
+    eyeL.userData.pupil.position.y = eyeCurY; eyeR.userData.pupil.position.y = eyeCurY;
     renderer.render(scene,camera);
   }
   animate();
