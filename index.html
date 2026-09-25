@@ -305,38 +305,35 @@ var projects = [
          ['THE BUILD',"Built end-to-end on Next.js, deployed and iterated on in the open."],
          ['THE RESULT',"Still early — live and evolving. No metrics to report yet."],
          ['STATUS',"In Progress"]]},
-  {id:'adnovaa',index:'02',title:'ADNOVAA', image:'adnovaa ui.png',
+  {id:'adnovaa',index:'02',title:'ADNOVAA.IN', image:'andova img.jpeg',
    desc:"A platform helping local brands with websites, SaaS applications, software services, and digital presence.",
-   role:'Builder · Developer',tech:'Websites · SaaS',status:'Active',statusClass:'active',
+   role:'Builder · Developer',tech:'Websites · SaaS',
    case:[['THE IDEA',"Local brands often need a real digital presence but don't have an in-house team to build one."],
          ['THE PROBLEM',"Getting a professional website or tool built is expensive or slow for small, local businesses."],
          ['THE APPROACH',"Working directly with brands — websites, SaaS tools and software built around what they actually need."],
          ['THE BUILD',"Practical, client-facing development, start to finish."],
-         ['THE RESULT',"Ongoing — case details added as projects wrap up."],
-         ['STATUS',"Active"]]},
-  {id:'clientwork',index:'03',title:'CLIENT WORKS',
+         ['THE RESULT',"Ongoing — case details added as projects wrap up."]]},
+  {id:'clientwork',index:'03',title:'CLIENT WORKS', image:'client work img.jpeg',
    desc:"Providing customized software, applications, and websites. I have shipped websites to 5 businesses so far: Gym, Photo Studio, Makeup Studio, Mobile Shop, and Cafe — and still counting.",
-   role:'Freelance Developer',tech:'Various',status:'Delivered',statusClass:'delivered',
+   role:'Freelance Developer',tech:'Various',
    case:[['SERVICES',"Customized software, applications, and websites."],
          ['PREVIOUS WORK',"Gym, Photo Studio, Makeup Studio, Mobile Shop, Cafe, and still counting."],
          ['THE APPROACH',"Take the brief, understand the business requirements, build it, ship it — repeat."],
          ['THE BUILD',"5+ websites delivered across different client requirements."],
-         ['THE RESULT',"5+ client websites delivered and live."],
-         ['STATUS',"Delivered"]]},
-  {id:'robotics',index:'04',title:'ROBOTICS COMPETITION — UEM',
+         ['THE RESULT',"5+ client websites delivered and live."]]},
+  {id:'robotics',index:'04',title:'ROBOTICS COMPETITION — UEM', image:'ROBOTICS COMPETITION.png',
    desc:"Hands-on robotics competition experience — hardware, problem-solving, and building outside the browser.",
-   role:'Participant',tech:'Hardware',status:'Completed',statusClass:'delivered',
+   role:'Participant',tech:'Hardware',
    case:[['THE IDEA',"Stepping away from the browser to build something physical."],
          ['THE PROBLEM',"A robotics competition at UEM — a different kind of building-under-pressure."],
          ['THE APPROACH',"Hands-on problem solving with hardware instead of code alone."],
          ['THE BUILD',"Team-built robot within competition constraints."],
-         ['THE RESULT',"Completed the competition — a good reminder that building isn't only software."],
-         ['STATUS',"Completed"]]}
+         ['THE RESULT',"Completed the competition — a good reminder that building isn't only software."]]}
 ];
 var stats = [['18','Years old'],['5+','Client websites delivered'],['1','Startup currently building'],['∞','Things I want to build']];
 var timeline = [
   ['FREELANCE / CLIENT WORKS','5+ client websites delivered','Providing customized software, applications, and websites for businesses like Gyms, Studios, Cafes, and more.'],
-  ['ADNOVAA · BUILDER / DEVELOPER','Helping local brands go digital','Websites, SaaS applications and software services for local brands.'],
+  ['ADNOVAA.IN · BUILDER / DEVELOPER','Helping local brands go digital','Websites, SaaS applications and software services for local brands.'],
   ['MY KIRANA · FOUNDER · DEVELOPER · MARKETER','Building a product from scratch','Designing, building and marketing a product for local kirana stores.']
 ];
 var skillsR1 = ['HTML','CSS','JavaScript','Next.js'];
@@ -349,7 +346,7 @@ function caseHTML(rows){return rows.map(function(r){return '<div><b>'+r[0]+'</b>
 function renderFeatured(p){
   return '<div class="project-featured reveal">'+(p.image?'<img src="'+p.image+'" alt="'+p.title+'" class="project-img">':mockBlocks())+
   '<div><span class="project-index">'+p.index+'</span><h3>'+p.title+'</h3><p>'+p.desc+'</p>'+
-  '<div class="meta-row"><span>'+p.role+'</span><span>'+p.tech+'</span><span class="status '+p.statusClass+'">'+p.status+'</span></div>'+
+  '<div class="meta-row"><span>'+p.role+'</span><span>'+p.tech+'</span>'+(p.status?'<span class="status '+p.statusClass+'">'+p.status+'</span>':'')+'</div>'+
   '<div class="project-links">'+(p.live?'<a href="'+p.live+'" target="_blank" rel="noopener">Live ↗</a>':'')+(p.github?'<span>GitHub · '+p.github+'</span>':'')+'</div>'+
   '<button class="details-btn" aria-expanded="false" data-case="'+p.id+'">View details</button>'+
   '<div class="case" id="case-'+p.id+'"><div class="case-inner">'+caseHTML(p.case)+'</div></div>'+
@@ -358,7 +355,7 @@ function renderFeatured(p){
 function renderCard(p){
   return '<div class="project-card reveal">'+(p.image?'<img src="'+p.image+'" alt="'+p.title+'" class="project-img">':mockBlocks())+
   '<h3>'+p.title+'</h3><p>'+p.desc+'</p>'+
-  '<div class="meta-row"><span>'+p.role+'</span><span class="status '+p.statusClass+'">'+p.status+'</span></div>'+
+  '<div class="meta-row"><span>'+p.role+'</span>'+(p.status?'<span class="status '+p.statusClass+'">'+p.status+'</span>':'')+'</div>'+
   '<button class="details-btn" aria-expanded="false" data-case="'+p.id+'">View details</button>'+
   '<div class="case" id="case-'+p.id+'"><div class="case-inner">'+caseHTML(p.case)+'</div></div>'+
   '</div>';
