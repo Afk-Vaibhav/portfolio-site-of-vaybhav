@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blogs — Vaibhav Raj (Vaybhav)</title>
+<meta name="description" content="Technical blog posts, startup lessons, homelab tutorials, and engineering notes by Vaibhav Raj (Vaybhav).">
+<meta name="keywords" content="Vaibhav Raj blog, software development blog, homelab, startup building, Next.js, AI developer notes">
+<meta name="author" content="Vaibhav Raj">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vaibhavraj.placeholder.com/blogs.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/jpeg" href="icon.jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="lock">
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="loader"><div class="l-text">LOADING BLOGS...</div><div class="l-bar"><div class="l-fill"></div></div></div>
+<div id="cursor-dot"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<!-- HUD Primary Nav -->
+<nav id="hud-nav" aria-label="Primary Navigation">
+  <a href="index.html" class="brand">VAIBHAV</a>
+  <a href="index.html" class="nav-link"><span>01</span>~</a>
+  <a href="projects.html" class="nav-link"><span>02</span>PROJECTS</a>
+  <a href="works.html" class="nav-link"><span>03</span>WORKS</a>
+  <a href="blogs.html" class="nav-link active"><span>04</span>BLOGS</a>
+  <a href="homelabbing.html" class="nav-link"><span>05</span>HOME LABING</a>
+</nav>
+
+<!-- Mobile Nav & Brand -->
+<a href="index.html" id="mobile-brand">VAIBHAV</a>
+<button id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+<div id="mobile-nav">
+  <a href="index.html">~</a>
+  <a href="projects.html">Projects</a>
+  <a href="works.html">Works</a>
+  <a href="blogs.html" class="active">Blogs</a>
+  <a href="homelabbing.html">Home Labing</a>
+</div>
+
+<main id="main">
+  <!-- Subpage Header -->
+  <section class="subpage-hero" aria-label="Blogs Header">
+    <div class="wrap">
+      <div class="eyebrow">04 / WRITINGS & NOTES</div>
+      <h1 class="reveal">Thoughts, guides & lessons.</h1>
+      <p class="reveal">
+        Documenting my journey building products like My Kirana, learnings from 5+ client websites, configuring my home lab, and preparing for the upcoming AI era.
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="filter-row reveal">
+        <button class="filter-chip active" data-filter="all">All Articles</button>
+        <button class="filter-chip" data-filter="startup">Startups & SaaS</button>
+        <button class="filter-chip" data-filter="homelab">Home Lab</button>
+        <button class="filter-chip" data-filter="freelance">Client Work</button>
+        <button class="filter-chip" data-filter="ai">AI & Future</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Cards Grid -->
+  <section style="padding-top: 1rem;">
+    <div class="wrap">
+      <div class="blog-grid" id="blog-grid">
+        
+        <!-- Post 1: My Kirana -->
+        <article class="blog-card reveal" data-category="startup">
+          <div>
+            <div class="blog-top">
+              <span class="blog-tag">#STARTUP · #NEXTJS</span>
+              <span>OCT 2026 · 5 MIN READ</span>
+            </div>
+            <h3>Building My Kirana: Why Local Stores Need Smarter Software</h3>
+            <p>
+              Local neighborhood grocery stores still run on chaos during peak hours. In this piece, I break down why existing enterprise POS tools fail small shops, and how designing a clean customer flow in Next.js can revolutionize the daily kirana shopping experience.
+            </p>
+          </div>
+          <div class="blog-footer">
+            <span class="blog-read-link">Read Full Note <span>→</span></span>
+            <span class="mono" style="font-size:0.68rem;color:var(--ink-faint);">Vaybhav</span>
+          </div>
+        </article>
+
+        <!-- Post 2: Home Lab -->
+        <article class="blog-card reveal" data-category="homelab">
+          <div>
+            <div class="blog-top">
+              <span class="blog-tag">#HOMELAB · #LINUX</span>
+              <span>SEP 2026 · 7 MIN READ</span>
+            </div>
+            <h3>My Home Lab Journey at 19: Hardware, Self-Hosting & Linux</h3>
+            <p>
+              Why every software developer should consider running a home server. Setting up Docker containers, reverse proxies with Cloudflare tunnels, Pi-hole DNS sinkholes, and taking full ownership of your personal data and infrastructure.
+            </p>
+          </div>
+          <div class="blog-footer">
+            <span class="blog-read-link">Read Full Note <span>→</span></span>
+            <span class="mono" style="font-size:0.68rem;color:var(--ink-faint);">Vaybhav</span>
+          </div>
+        </article>
+
+        <!-- Post 3: Client Works -->
+        <article class="blog-card reveal" data-category="freelance">
+          <div>
+            <div class="blog-top">
+              <span class="blog-tag">#FREELANCE · #BUSINESS</span>
+              <span>AUG 2026 · 6 MIN READ</span>
+            </div>
+            <h3>Shipping 5+ Client Websites as a Teen Developer</h3>
+            <p>
+              How I went from writing random code in a bedroom to delivering websites for Gyms, Photo Studios, and Cafes. The exact playbook on scoping projects, client communication, handling revisions, and building trust as a young builder.
+            </p>
+          </div>
+          <div class="blog-footer">
+            <span class="blog-read-link">Read Full Note <span>→</span></span>
+            <span class="mono" style="font-size:0.68rem;color:var(--ink-faint);">Vaybhav</span>
+          </div>
+        </article>
+
+        <!-- Post 4: AI Era -->
+        <article class="blog-card reveal" data-category="ai">
+          <div>
+            <div class="blog-top">
+              <span class="blog-tag">#AI · #ENGINEERING</span>
+              <span>2026 · 4 MIN READ</span>
+            </div>
+            <h3>Preparing for the Upcoming AI World: What Really Matters</h3>
+            <p>
+              With AI transforming how code is written, what skills stay durable? Why foundational problem-solving, understanding system architectures, tool calling, and autonomous agents are the real edge for software developers.
+            </p>
+          </div>
+          <div class="blog-footer">
+            <span class="blog-read-link">Read Full Note <span>→</span></span>
+            <span class="mono" style="font-size:0.68rem;color:var(--ink-faint);">Vaybhav</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Stay Tuned Banner -->
+      <div class="about-box reveal" style="margin-top: 3.5rem; text-align: center;">
+        <span class="section-label">MORE COMING SOON</span>
+        <h3 style="font-size: 1.8rem; margin-top: 0.5rem;">Have a topic you want me to write about?</h3>
+        <p style="color: var(--ink-dim); max-width: 52ch; margin: 0.8rem auto 1.5rem;">
+          I write about real-world building, freelancing truths, self-hosting experiments, and AI workflows. Reach out with ideas or feedback!
+        </p>
+        <a href="mailto:work.vaibhav.2020@gmail.com" class="project-btn-primary" style="display:inline-flex;">
+          SUGGEST A TOPIC ↗
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>
+    <strong>VAIBHAV RAJ (VAYBHAV)</strong><br>
+    19y/o Software Developer · Builder<br>
+    Patna, India
+  </div>
+  <div class="footer-nav">
+    <a href="index.html">~</a>
+    <a href="projects.html">Projects</a>
+    <a href="works.html">Works</a>
+    <a href="blogs.html">Blogs</a>
+    <a href="homelabbing.html">Home Labing</a>
+  </div>
+  <div>
+    <a href="https://github.com/afk-vaibhav" target="_blank" rel="noopener">GitHub</a> · 
+    <a href="https://instagram.com/vaybhav_7x" target="_blank" rel="noopener">Instagram</a> · 
+    <a href="https://x.com/vaybhav_7x" target="_blank" rel="noopener">X</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+<script>
+// Filter chips interactivity
+document.querySelectorAll('.filter-chip').forEach(function(chip) {
+  chip.addEventListener('click', function() {
+    document.querySelectorAll('.filter-chip').forEach(function(c) { c.classList.remove('active'); });
+    chip.classList.add('active');
+    var filter = chip.getAttribute('data-filter');
+    document.querySelectorAll('.blog-card').forEach(function(card) {
+      if (filter === 'all' || card.getAttribute('data-category') === filter) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>

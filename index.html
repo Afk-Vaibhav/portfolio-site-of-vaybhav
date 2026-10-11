@@ -3,521 +3,202 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Vaibhav Raj (Vaybhav) — Full-Stack Developer, AI & Builder at adnovaa.in</title>
-<meta name="description" content="Vaibhav Raj (aka Vaybhav) — full-stack & AI developer from Patna, India. Founder of adnovaa.in, building My Kirana, working with real clients, and shipping real things.">
-<meta name="keywords" content="Vaibhav Raj, Vaybhav, adnovaa.in, full-stack developer, AI developer, web developer Patna, My Kirana, software engineer, portfolio">
+<title>Vaibhav Raj (Vaybhav) — 19y/o Software Developer</title>
+<meta name="description" content="19y/o software developer Vaibhav Raj (Vaybhav). Building real world stuff, worked with clients, building My Kirana and home lab.">
+<meta name="keywords" content="Vaibhav Raj, Vaybhav, software developer, My Kirana, home lab">
 <meta name="author" content="Vaibhav Raj">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://vaibhavraj.placeholder.com/">
 
-<!-- Open Graph / Facebook -->
+<!-- Open Graph / Twitter -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://vaibhavraj.placeholder.com/">
-<meta property="og:title" content="Vaibhav Raj (Vaybhav) — Just a guy who builds stuff.">
-<meta property="og:description" content="Full-stack & AI developer from Patna, India. Founder of adnovaa.in, building My Kirana, working with real clients, and shipping real things.">
-<meta property="og:image" content="https://vaibhavraj.placeholder.com/icon.jpg">
-
-<!-- Twitter -->
+<meta property="og:title" content="Vaibhav Raj (Vaybhav) — 19y/o Software Developer">
+<meta property="og:description" content="Building real world stuff, My Kirana, and home lab.">
+<meta property="og:image" content="icon.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://vaibhavraj.placeholder.com/">
-<meta name="twitter:title" content="Vaibhav Raj (Vaybhav) — Developer & Builder">
-<meta name="twitter:description" content="Full-stack & AI developer from Patna, India. Founder of adnovaa.in, building My Kirana, and shipping real things.">
-<meta name="twitter:image" content="https://vaibhavraj.placeholder.com/icon.jpg">
-
-<!-- Structured Data (JSON-LD) for better Google ranking -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Vaibhav Raj",
-  "alternateName": "Vaybhav",
-  "url": "https://vaibhavraj.placeholder.com/",
-  "jobTitle": "Full-Stack Developer & AI Developer",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "adnovaa.in"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Patna",
-    "addressCountry": "India"
-  },
-  "sameAs": [
-    "https://github.com/afk-vaibhav",
-    "https://instagram.com/vaybhav.user"
-  ]
-}
-</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" type="image/jpeg" href="icon.jpg">
-
-<style>
-:root{
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-  --bg:#06060a; --bg-soft:#0b0b13; --ink:#f2f1f6; --ink-dim:#8d8b9c; --ink-faint:#514f63;
-  --blue:#4f8dff; --purple:#9b5cff; --blue-soft:rgba(79,141,255,.35); --purple-soft:rgba(155,92,255,.35);
-  --glass:rgba(255,255,255,.045); --border:rgba(255,255,255,.1);
-  --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',monospace;
-}
-html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);}
-*{box-sizing:border-box;}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6;overflow-x:hidden;}
-body.lock{overflow:hidden;height:100vh;}
-::selection{background:var(--blue);color:#000;}
-a{color:inherit;}
-button{font-family:inherit;}
-.skip-link{position:absolute;left:-999px;top:0;background:var(--blue);color:#000;padding:.6rem 1rem;z-index:10000;}
-.skip-link:focus{left:1rem;top:1rem;}
-:focus-visible{outline:2px solid var(--blue);outline-offset:3px;}
-.mono{font-family:var(--mono);}
-.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem);}
-section{position:relative;padding:clamp(4rem,10vw,7rem) 0;}
-h1,h2,h3{font-family:var(--display);font-weight:700;margin:0;letter-spacing:-.02em;}
-.section-label{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;color:var(--blue);margin-bottom:1rem;}
-.reveal{opacity:0;}
-
-/* loader */
-#loader{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;transition:opacity .6s ease,visibility .6s;}
-#loader.done{opacity:0;visibility:hidden;pointer-events:none;}
-#loader .l-text{font-family:var(--mono);font-size:.8rem;letter-spacing:.2em;color:var(--ink-dim);}
-#loader .l-bar{width:180px;height:2px;background:var(--border);overflow:hidden;border-radius:2px;}
-#loader .l-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--blue),var(--purple));animation:load 1.1s ease forwards;}
-@keyframes load{to{width:100%}}
-
-/* cursor */
-#cursor-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:9998;border-radius:50%;transform:translate(-50%,-50%);width:6px;height:6px;background:var(--blue);}
-body.no-cursor #cursor-dot{display:none;}
-
-/* nav */
-#hud-nav{position:fixed;top:calc(1.1rem + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:500;display:flex;align-items:center;gap:1.6rem;padding:.65rem 1.4rem;border:1px solid var(--border);border-radius:999px;background:rgba(8,8,14,.55);backdrop-filter:blur(14px);}
-#hud-nav .brand{font-family:var(--mono);font-size:.75rem;letter-spacing:.1em;color:var(--ink);padding-right:.6rem;border-right:1px solid var(--border);}
-#hud-nav a{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-decoration:none;color:var(--ink-dim);display:flex;gap:.35rem;}
-#hud-nav a span{color:var(--ink-faint);}
-#hud-nav a:hover{color:var(--ink);}
-#mobile-menu-btn{display:none;position:fixed;top:calc(1.1rem + env(safe-area-inset-top,0px));right:1.1rem;z-index:520;width:44px;height:44px;border-radius:50%;border:1px solid var(--border);background:rgba(8,8,14,.6);backdrop-filter:blur(10px);color:var(--ink);align-items:center;justify-content:center;}
-#mobile-nav{position:fixed;inset:0;z-index:510;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.6rem;transform:translateY(-100%);transition:transform .5s cubic-bezier(.6,0,.2,1);}
-#mobile-nav.open{transform:translateY(0);}
-#mobile-nav a{font-family:var(--display);font-size:1.6rem;color:var(--ink);text-decoration:none;}
-
-/* hero */
-#hero{min-height:100svh;display:flex;align-items:center;padding-top:6rem;}
-#robot-canvas{position:absolute;inset:0;width:100%;height:100%;}
-.hero-content{position:relative;z-index:2;max-width:680px;margin:0 clamp(1.25rem,4vw,3rem); pointer-events:none;}
-.hero-content > * {pointer-events:auto;}
-.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;color:var(--ink-dim);margin-bottom:1.1rem;}
-.hero-headline{font-size:clamp(2.5rem,7.4vw,6rem);line-height:.98;background:linear-gradient(120deg,#fff 20%,var(--blue) 70%,var(--purple) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
-.hero-sub{max-width:38ch;color:var(--ink-dim);font-size:1.05rem;margin-top:1.4rem;}
-.hero-loc{margin-top:1.6rem;font-family:var(--mono);font-size:.75rem;color:var(--ink-faint);letter-spacing:.05em;}
-.scroll-cue{position:absolute;bottom:-4.5rem;left:0;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;color:var(--ink-faint);animation:bob 2.4s ease-in-out infinite;}
-@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
-
-/* about */
-.about-text{max-width:56ch;color:var(--ink-dim);font-size:1.15rem;margin-top:.6rem;}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem;}
-.stat-card{padding:1.6rem 1.2rem;border:1px solid var(--border);border-radius:16px;background:var(--glass);transition:transform .15s ease,border-color .2s;will-change:transform;}
-.stat-card:hover{border-color:var(--blue-soft);}
-.stat-num{display:block;font-family:var(--display);font-size:2.4rem;font-weight:700;background:linear-gradient(120deg,var(--blue),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent;}
-.stat-label{display:block;font-size:.82rem;color:var(--ink-dim);margin-top:.3rem;}
-
-/* work */
-h2{font-size:clamp(1.9rem,4.4vw,3.1rem);max-width:16ch;}
-.project-featured{margin-top:2.5rem;display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;align-items:center;border:1px solid var(--border);border-radius:22px;padding:clamp(1.5rem,3vw,2.5rem);background:linear-gradient(160deg,rgba(79,141,255,.06),rgba(155,92,255,.04));}
-.device-mock{border-radius:14px;border:1px solid var(--border);background:var(--bg-soft);padding:1rem;}
-.device-mock .dots{display:flex;gap:.4rem;margin-bottom:1rem;}
-.device-mock .dots span{width:8px;height:8px;border-radius:50%;background:var(--ink-faint);}
-.device-mock .blocks{display:grid;gap:.6rem;}
-.device-mock .blocks i{display:block;height:14px;border-radius:6px;background:linear-gradient(90deg,var(--blue-soft),var(--purple-soft));opacity:.5;font-style:normal;}
-.device-mock .blocks i:nth-child(2){width:70%}
-.device-mock .blocks i:nth-child(3){width:85%}
-.device-mock .blocks i.tall{height:70px;opacity:.35;margin-top:.3rem;}
-.project-img{width:100%;height:auto;border-radius:14px;border:1px solid var(--border);aspect-ratio:16/9;object-fit:cover;display:block;}
-.project-card .project-img{aspect-ratio:4/3;}
-.project-index{font-family:var(--mono);color:var(--blue);font-size:.8rem;}
-.project-featured h3{font-size:clamp(1.6rem,3vw,2.2rem);margin-top:.4rem;}
-.project-featured p, .project-card p{color:var(--ink-dim);margin-top:.7rem;max-width:46ch;}
-.meta-row{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:1.3rem;font-family:var(--mono);font-size:.72rem;color:var(--ink-dim);}
-.status{padding:.2rem .6rem;border-radius:999px;border:1px solid var(--border);}
-.status.in-progress{color:var(--blue);border-color:var(--blue-soft);}
-.status.active{color:var(--purple);border-color:var(--purple-soft);}
-.status.delivered{color:#8ee6b0;border-color:rgba(142,230,176,.4);}
-.project-links{margin-top:1.3rem;display:flex;gap:1.4rem;font-family:var(--mono);font-size:.78rem;}
-.project-links a{text-decoration:none;color:var(--blue);}
-.details-btn{margin-top:1.2rem;background:none;border:1px solid var(--border);color:var(--ink);border-radius:999px;padding:.5rem 1.1rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;cursor:pointer;}
-.details-btn:hover{border-color:var(--blue-soft);color:var(--blue);}
-.case{max-height:0;overflow:hidden;transition:max-height .5s ease;}
-.case.open{max-height:600px;}
-.case-inner{padding-top:1.2rem;display:grid;gap:.9rem;}
-.case-inner div b{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;color:var(--purple);margin-bottom:.2rem;}
-.case-inner div span{color:var(--ink-dim);font-size:.92rem;}
-.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:1.4rem;}
-.project-card{border:1px solid var(--border);border-radius:18px;padding:1.4rem;background:var(--glass);}
-.project-card h3{font-size:1.15rem;margin-top:.9rem;}
-
-/* building */
-.building-panel{margin-top:2rem;border:1px solid var(--border);border-radius:22px;padding:clamp(1.5rem,3vw,2.5rem);background:radial-gradient(circle at 20% 20%,rgba(155,92,255,.08),transparent 60%);}
-.building-tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.4rem;}
-.building-tags span{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--border);color:var(--ink-dim);}
-.building-tags .tag-live{color:var(--blue);border-color:var(--blue-soft);}
-.building-panel h3{font-size:1.7rem;}
-.building-panel p{color:var(--ink-dim);max-width:60ch;margin-top:.6rem;}
-
-/* timeline */
-.timeline{margin-top:2.5rem;border-left:1px solid var(--border);padding-left:2rem;display:grid;gap:2.4rem;}
-.tl-item{position:relative;}
-.tl-item::before{content:'';position:absolute;left:-2.42rem;top:.3rem;width:9px;height:9px;border-radius:50%;background:var(--blue);box-shadow:0 0 12px var(--blue);}
-.tl-item .tl-role{font-family:var(--mono);font-size:.7rem;color:var(--purple);letter-spacing:.06em;}
-.tl-item h3{font-size:1.3rem;margin-top:.3rem;}
-.tl-item p{color:var(--ink-dim);margin-top:.4rem;max-width:52ch;}
-
-/* skills */
-.orbit-wrap{position:relative;width:min(92vw,480px);height:min(92vw,480px);margin:3.5rem auto 0;}
-.orbit-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:82px;height:82px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--mono);color:var(--blue);font-size:.8rem;border:1px solid var(--border);background:var(--glass);backdrop-filter:blur(12px);box-shadow:0 0 40px var(--blue-soft);}
-.orbit-ring{position:absolute;inset:0;animation:spin 26s linear infinite;}
-.orbit-ring.r2{animation-duration:36s;animation-direction:reverse;}
-.orbit-pos{position:absolute;top:50%;left:50%;}
-.orbit-pos i{display:block;transform:rotate(var(--a)) translateX(clamp(90px,25vw,150px));font-style:normal;}
-.r2 .orbit-pos i{transform:rotate(var(--a)) translateX(clamp(140px,34vw,230px));}
-.orbit-item{display:inline-block;transform:translate(-50%,-50%);animation:counterspin 26s linear infinite;font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;padding:.5rem .9rem;border:1px solid var(--border);border-radius:999px;background:var(--glass);backdrop-filter:blur(8px);white-space:nowrap;}
-.r2 .orbit-item{animation:counterspin-rev 36s linear infinite;}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes counterspin{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(-360deg)}}
-@keyframes counterspin-rev{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
-
-/* personality */
-#personality h2{max-width:22ch;font-size:clamp(1.7rem,4vw,2.6rem);}
-#personality p{color:var(--ink-dim);margin-top:1rem;max-width:52ch;font-size:1.05rem;}
-
-/* contact */
-#contact{text-align:left;}
-#contact p{color:var(--ink-dim);max-width:48ch;margin-top:.8rem;}
-#build-cta{margin-top:2.2rem;background:linear-gradient(120deg,var(--blue),var(--purple));border:none;color:#050508;font-family:var(--display);font-weight:700;font-size:1.15rem;padding:1.1rem 2.2rem;border-radius:999px;cursor:pointer;transition:transform .18s ease;}
-#contact-reveal{margin-top:1.8rem;display:flex;gap:1.6rem;font-family:var(--mono);font-size:.85rem;}
-#contact-reveal a{text-decoration:none;color:var(--blue);}
-#contact-reveal[hidden]{display:none;}
-.contact-email{color:var(--ink-faint);}
-
-footer{padding:3rem clamp(1.25rem,4vw,3rem) calc(2.5rem + env(safe-area-inset-bottom,0px));border-top:1px solid var(--border);font-family:var(--mono);font-size:.75rem;color:var(--ink-dim);display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;}
-footer a{text-decoration:none;color:var(--ink-dim);}
-
-@media(prefers-reduced-motion:reduce){
-  .scroll-cue,.orbit-ring,.orbit-item{animation:none!important;}
-  html{scroll-behavior:auto;}
-}
-@media (hover:none),(pointer:coarse){
-  #cursor-dot{display:none;}
-}
-@media(max-width:860px){
-  #hud-nav{display:none;}
-  #mobile-menu-btn{display:flex;}
-  .project-featured{grid-template-columns:1fr;}
-  .project-grid{grid-template-columns:1fr;}
-  .stats-grid{grid-template-columns:repeat(2,1fr);}
-  .timeline{padding-left:1.4rem;}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body class="lock">
 <a href="#main" class="skip-link">Skip to content</a>
-<div id="loader"><div class="l-text">LOADING THE PLAYGROUND...</div><div class="l-bar"><div class="l-fill"></div></div></div>
+<div id="loader"><div class="l-text">LOADING...</div><div class="l-bar"><div class="l-fill"></div></div></div>
 <div id="cursor-dot"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
 
-<nav id="hud-nav" aria-label="Primary">
-  <span class="brand">VAIBHAV</span>
-  <a href="#work"><span>01</span>WORK</a>
-  <a href="#about"><span>02</span>ABOUT</a>
-  <a href="#building"><span>03</span>BUILDING</a>
-  <a href="#skills"><span>04</span>SKILLS</a>
-  <a href="#contact"><span>05</span>CONTACT</a>
+<!-- HUD Primary Nav -->
+<nav id="hud-nav" aria-label="Primary Navigation">
+  <a href="index.html" class="brand">VAIBHAV</a>
+  <a href="index.html" class="nav-link active"><span>01</span>~</a>
+  <a href="projects.html" class="nav-link"><span>02</span>PROJECTS</a>
+  <a href="works.html" class="nav-link"><span>03</span>WORKS</a>
+  <a href="blogs.html" class="nav-link"><span>04</span>BLOGS</a>
+  <a href="homelabbing.html" class="nav-link"><span>05</span>HOME LABING</a>
 </nav>
+
+<!-- Mobile Nav & Brand -->
+<a href="index.html" id="mobile-brand">VAIBHAV</a>
 <button id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">☰</button>
-<div id="mobile-nav"><a href="#work">Work</a><a href="#about">About</a><a href="#building">Building</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+<div id="mobile-nav">
+  <a href="index.html" class="active">~</a>
+  <a href="projects.html">Projects</a>
+  <a href="works.html">Works</a>
+  <a href="blogs.html">Blogs</a>
+  <a href="homelabbing.html">Home Labing</a>
+</div>
 
 <main id="main">
-<section id="hero" aria-label="Intro">
-  <canvas id="robot-canvas" aria-hidden="true"></canvas>
-  <div class="hero-content">
-    <div class="eyebrow">VAIBHAV RAJ · FULL-STACK DEVELOPER · AI DEVELOPER · BUILDER</div>
-    <h1 class="hero-headline">Just a guy who<br>builds stuff.</h1>
-    <p class="hero-sub">A guy who loves tech, builds things from scratch, and experiments with SaaS businesses.</p>
-    <div class="hero-loc">📍 PATNA, INDIA</div>
-    <div class="scroll-cue">SCROLL TO EXPLORE ↓</div>
-  </div>
-</section>
+  <section class="about-hero" aria-label="About">
+    <div class="wrap">
+      <div class="about-box reveal">
+        <div class="about-badge">⚡ 19y/o software devloper,</div>
+        
+        <div class="about-body">
+          <p>
+            i m Vaibhav raj also known as <strong>(Vaybhav)</strong> on the social platforms, a guy who build real world stuffs, worked with multiple clients in past, still learning and prepairing for upcoming ai word,
+          </p>
+          <p>
+            building <a href="https://my-kirana.netlify.app" target="_blank" rel="noopener" class="highlight-link">My Kirana ↗</a> a software which helps local grocery stores to manage there customers,
+          </p>
+          <p>
+            also building my own <a href="homelabbing.html" class="homelab-btn">home lab</a>
+          </p>
+        </div>
 
-<section id="about" aria-labelledby="about-h">
-  <div class="wrap">
-    <div class="section-label reveal">02 / ABOUT</div>
-    <h2 id="about-h" class="reveal">Who's behind the screen?</h2>
-    <p class="about-text reveal">I'm Vaibhav (also known as Vaybhav online), a developer and builder from Patna, India. I like taking an idea, figuring out how it works, and turning it into something people can actually use.</p>
-    <div class="stats-grid" id="stats-grid"></div>
-  </div>
-</section>
+        <!-- Social Media Bento Cards (inspired by reference image) -->
+        <div class="bento-social-wrap">
+          <div class="bento-squiggle">~~~~</div>
+          <div class="bento-lead">feel free to reach out & connect:</div>
+          
+          <div class="bento-social-grid">
+            <!-- GitHub Card -->
+            <a href="https://github.com/afk-vaibhav" target="_blank" rel="noopener" class="bento-card bento-card-github">
+              <div>
+                <div class="bento-gh-header">
+                  <svg class="bento-gh-icon" viewBox="0 0 24 24">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <div>
+                    <span class="bento-title">GitHub</span>
+                    <span class="bento-sub">My Projects</span>
+                  </div>
+                </div>
+              </div>
+              <span class="bento-sub mono" style="color:var(--blue);">@afk-vaibhav ↗</span>
+            </a>
 
-<section id="work" aria-labelledby="work-h">
-  <div class="wrap">
-    <div class="section-label reveal">01 / WORK</div>
-    <h2 id="work-h" class="reveal">Featured work</h2>
-    <div id="featured-slot"></div>
-    <div class="project-grid" id="grid-slot"></div>
-  </div>
-</section>
+            <!-- Contribution Activity Matrix Card -->
+            <a href="https://github.com/afk-vaibhav" target="_blank" rel="noopener" class="bento-card bento-card-activity">
+              <div class="contrib-matrix" aria-hidden="true">
+                <span class="contrib-cell cell-l2"></span>
+                <span class="contrib-cell cell-l4"></span>
+                <span class="contrib-cell cell-l1"></span>
+                <span class="contrib-cell cell-l3"></span>
+                <span class="contrib-cell cell-l2"></span>
+                <span class="contrib-cell cell-l4"></span>
+                <span class="contrib-cell cell-l1"></span>
+                <span class="contrib-cell cell-l3"></span>
+                <span class="contrib-cell cell-l4"></span>
+                <span class="contrib-cell cell-l2"></span>
+                <span class="contrib-cell cell-l3"></span>
+                <span class="contrib-cell cell-l4"></span>
+                
+                <span class="contrib-cell cell-l3"></span>
+                <span class="contrib-cell cell-l1"></span>
+                <span class="contrib-cell cell-l4"></span>
+                <span class="contrib-cell cell-l2"></span>
+                <span class="contrib-cell cell-l3"></span>
+                <span class="contrib-cell cell-l1"></span>
+                <span class="contrib-cell cell-l4"></span>
+                <span class="contrib-cell cell-l4"></span>
+                <span class="contrib-cell cell-l2"></span>
+                <span class="contrib-cell cell-l3"></span>
+                <span class="contrib-cell cell-l1"></span>
+                <span class="contrib-cell cell-l3"></span>
 
-<section id="building" aria-labelledby="building-h">
-  <div class="wrap">
-    <div class="section-label reveal">03 / BUILDING</div>
-    <h2 id="building-h" class="reveal">Currently building</h2>
-    <div class="building-panel reveal">
-      <div class="building-tags"><span>PRODUCT</span><span>CUSTOMER FLOW</span><span>SHOP MANAGEMENT</span><span>NEXT.JS</span><span class="tag-live">IN PROGRESS</span></div>
-      <h3>My Kirana</h3>
-      <p>Local kirana shopping still means walking to the shop and waiting your turn. My Kirana is a product I'm building from scratch to make that flow more organized — for customers and for the shop owners managing it.</p>
+                <span class="contrib-cell cell-l1"></span>
+                <span class="contrib-cell cell-l3"></span>
+                <span class="contrib-cell cell-l2"></span>
+                <span class="contrib-cell cell-l4"></span>
+                <span class="contrib-cell cell-l1"></span>
+                <span class="contrib-cell cell-l3"></span>
+                <span class="contrib-cell cell-l2"></span>
+                <span class="contrib-cell cell-l3"></span>
+                <span class="contrib-cell cell-l4"></span>
+                <span class="contrib-cell cell-l1"></span>
+                <span class="contrib-cell cell-l4"></span>
+                <span class="contrib-cell cell-l2"></span>
+
+                <span class="contrib-cell cell-l4"></span>
+                <span class="contrib-cell cell-l2"></span>
+                <span class="contrib-cell cell-l3"></span>
+                <span class="contrib-cell cell-l1"></span>
+                <span class="contrib-cell cell-l4"></span>
+                <span class="contrib-cell cell-l2"></span>
+                <span class="contrib-cell cell-l3"></span>
+                <span class="contrib-cell cell-l4"></span>
+                <span class="contrib-cell cell-l1"></span>
+                <span class="contrib-cell cell-l3"></span>
+                <span class="contrib-cell cell-l2"></span>
+                <span class="contrib-cell cell-l4"></span>
+              </div>
+              <div class="contrib-stats">
+                <span>Code & Builds <strong>Active</strong></span>
+                <span>Contributions ↗</span>
+              </div>
+            </a>
+
+            <!-- Row 2: Instagram & X Side-by-Side -->
+            <div class="bento-row-cards">
+              <!-- Instagram Card -->
+              <a href="https://instagram.com/vaybhav_7x" target="_blank" rel="noopener" class="bento-card bento-card-ig">
+                <svg class="bento-ig-icon" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                <span class="bento-title" style="font-size:1.05rem;">Instagram</span>
+                <span class="bento-sub">(connect / life)</span>
+              </a>
+
+              <!-- X Card -->
+              <a href="https://x.com/vaybhav_7x" target="_blank" rel="noopener" class="bento-card bento-card-x">
+                <svg class="bento-x-icon" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                <span class="bento-sub mono" style="color:var(--ink-dim);">(little little something something)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-<section id="experience" aria-labelledby="exp-h">
-  <div class="wrap">
-    <div class="section-label reveal">05 / EXPERIENCE</div>
-    <h2 id="exp-h" class="reveal">How I got here</h2>
-    <div class="timeline" id="timeline-slot"></div>
-  </div>
-</section>
-
-<section id="skills" aria-labelledby="skills-h">
-  <div class="wrap" style="text-align:center;">
-    <div class="section-label reveal" style="text-align:left;">04 / SKILLS</div>
-    <h2 id="skills-h" class="reveal" style="margin:0 auto;text-align:left;">The stuff I build with</h2>
-    <div class="orbit-wrap reveal" id="orbit-wrap"></div>
-  </div>
-</section>
-
-<section id="personality" aria-label="Personality">
-  <div class="wrap">
-    <h2 class="reveal">I like building things that didn't exist yesterday.</h2>
-    <p class="reveal">Most of what I build starts as a random idea and a blank file. I'd rather ship something rough and real than talk about something perfect.</p>
-  </div>
-</section>
-
-<section id="contact" aria-labelledby="contact-h">
-  <div class="wrap">
-    <div class="section-label reveal">05 / CONTACT</div>
-    <h2 id="contact-h" class="reveal">Let's build something.</h2>
-    <p class="reveal">Open to freelance work, collaborations, and interesting product ideas. If you've got something worth building, I'd like to hear it.</p>
-    <button id="build-cta" class="reveal">LET'S BUILD →</button>
-    <div id="contact-reveal" hidden>
-      <a href="https://github.com/afk-vaibhav" target="_blank" rel="noopener">GitHub ↗</a>
-      <a href="https://instagram.com/vaybhav.user" target="_blank" rel="noopener">Instagram ↗</a>
-      <a href="mailto:work.vaibhav.2020@gmail.com" class="contact-email">work.vaibhav.2020@gmail.com ↗</a>
-    </div>
-  </div>
-</section>
+  </section>
 </main>
 
 <footer>
-  <div><strong>VAIBHAV RAJ</strong><br>JUST A GUY WHO BUILDS STUFF.<br>Patna, India</div>
-  <div><a href="https://github.com/afk-vaibhav" target="_blank" rel="noopener">GitHub</a> · <a href="https://instagram.com/vaybhav.user" target="_blank" rel="noopener">Instagram</a></div>
-
+  <div>
+    <strong>VAIBHAV RAJ (VAYBHAV)</strong><br>
+    Patna, India
+  </div>
+  <div class="footer-nav">
+    <a href="index.html">~</a>
+    <a href="projects.html">Projects</a>
+    <a href="works.html">Works</a>
+    <a href="blogs.html">Blogs</a>
+    <a href="homelabbing.html">Home Labing</a>
+  </div>
+  <div>
+    <a href="https://github.com/afk-vaibhav" target="_blank" rel="noopener">GitHub</a> · 
+    <a href="https://instagram.com/vaybhav_7x" target="_blank" rel="noopener">Instagram</a> · 
+    <a href="https://x.com/vaybhav_7x" target="_blank" rel="noopener">X</a>
+  </div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script>
-(function(){
-"use strict";
-var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-var isTouch = window.matchMedia('(hover:none),(pointer:coarse)').matches;
-var isMobile = window.innerWidth < 860;
-if(isTouch) document.body.classList.add('no-cursor');
-
-/* ---------- DATA ---------- */
-var projects = [
-  {id:'mykirana',featured:true,index:'01',title:'MY KIRANA', image:'ui in laptop.png',
-   desc:"A product I'm building to make local kirana shopping more organized and reduce customer crowd and waiting at the shop.",
-   role:'Founder · Developer · Marketer',tech:'Next.js',status:'In Progress',statusClass:'in-progress',
-   live:'https://my-kirana.netlify.app',github:'Private',
-   case:[['THE IDEA',"Move the everyday kirana-shop flow — browsing, ordering, waiting — into something faster and more organized."],
-         ['THE PROBLEM',"Customers crowd small shops and wait around for simple things, and shop owners have no easy digital way to manage orders."],
-         ['THE APPROACH',"Building it solo as founder and developer — designing the customer flow and shop-management side together, then shipping fast."],
-         ['THE BUILD',"Built end-to-end on Next.js, deployed and iterated on in the open."],
-         ['THE RESULT',"Still early — live and evolving. No metrics to report yet."],
-         ['STATUS',"In Progress"]]},
-  {id:'adnovaa',index:'02',title:'ADNOVAA.IN', image:'andova img.jpeg',
-   desc:"A platform helping local brands with websites, SaaS applications, software services, and digital presence.",
-   role:'Builder · Developer',tech:'Websites · SaaS',
-   case:[['THE IDEA',"Local brands often need a real digital presence but don't have an in-house team to build one."],
-         ['THE PROBLEM',"Getting a professional website or tool built is expensive or slow for small, local businesses."],
-         ['THE APPROACH',"Working directly with brands — websites, SaaS tools and software built around what they actually need."],
-         ['THE BUILD',"Practical, client-facing development, start to finish."],
-         ['THE RESULT',"Ongoing — case details added as projects wrap up."]]},
-  {id:'clientwork',index:'03',title:'CLIENT WORKS', image:'client work img.jpeg',
-   desc:"Providing customized software, applications, and websites. I have shipped websites to 5 businesses so far: Gym, Photo Studio, Makeup Studio, Mobile Shop, and Cafe — and still counting.",
-   role:'Freelance Developer',tech:'Various',
-   case:[['SERVICES',"Customized software, applications, and websites."],
-         ['PREVIOUS WORK',"Gym, Photo Studio, Makeup Studio, Mobile Shop, Cafe, and still counting."],
-         ['THE APPROACH',"Take the brief, understand the business requirements, build it, ship it — repeat."],
-         ['THE BUILD',"5+ websites delivered across different client requirements."],
-         ['THE RESULT',"5+ client websites delivered and live."]]},
-  {id:'robotics',index:'04',title:'ROBOTICS COMPETITION — UEM', image:'ROBOTICS COMPETITION.png',
-   desc:"Hands-on robotics competition experience — hardware, problem-solving, and building outside the browser.",
-   role:'Participant',tech:'Hardware',
-   case:[['THE IDEA',"Stepping away from the browser to build something physical."],
-         ['THE PROBLEM',"A robotics competition at UEM — a different kind of building-under-pressure."],
-         ['THE APPROACH',"Hands-on problem solving with hardware instead of code alone."],
-         ['THE BUILD',"Team-built robot within competition constraints."],
-         ['THE RESULT',"Completed the competition — a good reminder that building isn't only software."]]}
-];
-var stats = [['18','Years old'],['5+','Client websites delivered'],['1','Startup currently building'],['∞','Things I want to build']];
-var timeline = [
-  ['FREELANCE / CLIENT WORKS','5+ client websites delivered','Providing customized software, applications, and websites for businesses like Gyms, Studios, Cafes, and more.'],
-  ['ADNOVAA.IN · BUILDER / DEVELOPER','Helping local brands go digital','Websites, SaaS applications and software services for local brands.'],
-  ['MY KIRANA · FOUNDER · DEVELOPER · MARKETER','Building a product from scratch','Designing, building and marketing a product for local kirana stores.']
-];
-var skillsR1 = ['HTML','CSS','JavaScript','Next.js'];
-var skillsR2 = ['Supabase','Git','GitHub'];
-
-/* ---------- RENDER ---------- */
-function mockBlocks(){return '<div class="device-mock"><div class="dots"><span></span><span></span><span></span></div><div class="blocks"><i></i><i></i><i></i><i class="tall"></i></div></div>';}
-function caseHTML(rows){return rows.map(function(r){return '<div><b>'+r[0]+'</b><span>'+r[1]+'</span></div>';}).join('');}
-
-function renderFeatured(p){
-  return '<div class="project-featured reveal">'+(p.image?'<img src="'+p.image+'" alt="'+p.title+'" class="project-img">':mockBlocks())+
-  '<div><span class="project-index">'+p.index+'</span><h3>'+p.title+'</h3><p>'+p.desc+'</p>'+
-  '<div class="meta-row"><span>'+p.role+'</span><span>'+p.tech+'</span>'+(p.status?'<span class="status '+p.statusClass+'">'+p.status+'</span>':'')+'</div>'+
-  '<div class="project-links">'+(p.live?'<a href="'+p.live+'" target="_blank" rel="noopener">Live ↗</a>':'')+(p.github?'<span>GitHub · '+p.github+'</span>':'')+'</div>'+
-  '<button class="details-btn" aria-expanded="false" data-case="'+p.id+'">View details</button>'+
-  '<div class="case" id="case-'+p.id+'"><div class="case-inner">'+caseHTML(p.case)+'</div></div>'+
-  '</div></div>';
-}
-function renderCard(p){
-  return '<div class="project-card reveal">'+(p.image?'<img src="'+p.image+'" alt="'+p.title+'" class="project-img">':mockBlocks())+
-  '<h3>'+p.title+'</h3><p>'+p.desc+'</p>'+
-  '<div class="meta-row"><span>'+p.role+'</span>'+(p.status?'<span class="status '+p.statusClass+'">'+p.status+'</span>':'')+'</div>'+
-  '<button class="details-btn" aria-expanded="false" data-case="'+p.id+'">View details</button>'+
-  '<div class="case" id="case-'+p.id+'"><div class="case-inner">'+caseHTML(p.case)+'</div></div>'+
-  '</div>';
-}
-document.getElementById('featured-slot').innerHTML = renderFeatured(projects[0]);
-document.getElementById('grid-slot').innerHTML = projects.slice(1).map(renderCard).join('');
-document.getElementById('stats-grid').innerHTML = stats.map(function(s){return '<div class="stat-card reveal"><span class="stat-num">'+s[0]+'</span><span class="stat-label">'+s[1]+'</span></div>';}).join('');
-document.getElementById('timeline-slot').innerHTML = timeline.map(function(t){return '<div class="tl-item reveal"><div class="tl-role">'+t[0]+'</div><h3>'+t[1]+'</h3><p>'+t[2]+'</p></div>';}).join('');
-
-function ring(items,cls,r){return '<div class="orbit-ring '+cls+'">'+items.map(function(s,i){return '<div class="orbit-pos" style="--a:'+(i*360/items.length)+'deg"><i><span class="orbit-item">'+s+'</span></i></div>';}).join('')+'</div>';}
-document.getElementById('orbit-wrap').innerHTML = '<div class="orbit-center">‹/&gt;</div>'+ring(skillsR1,'r1')+ring(skillsR2,'r2');
-
-document.querySelectorAll('.details-btn').forEach(function(btn){
-  btn.addEventListener('click',function(){
-    var panel = document.getElementById('case-'+btn.dataset.case);
-    var open = panel.classList.toggle('open');
-    btn.setAttribute('aria-expanded',open);
-    btn.textContent = open ? 'Hide details' : 'View details';
-  });
-});
-
-/* ---------- LOADER ---------- */
-window.addEventListener('load',function(){
-  setTimeout(function(){
-    document.getElementById('loader').classList.add('done');
-    document.body.classList.remove('lock');
-  }, reduceMotion?150:750);
-});
-
-/* ---------- CUSTOM CURSOR ---------- */
-if(!isTouch){
-  var dot=document.getElementById('cursor-dot');
-  window.addEventListener('mousemove',function(e){dot.style.transform='translate('+e.clientX+'px,'+e.clientY+'px) translate(-50%,-50%)';});
-}
-
-/* ---------- NAV ---------- */
-var menuBtn=document.getElementById('mobile-menu-btn'), mnav=document.getElementById('mobile-nav');
-menuBtn.addEventListener('click',function(){
-  var open = mnav.classList.toggle('open');
-  menuBtn.setAttribute('aria-expanded',open);
-  menuBtn.textContent = open?'✕':'☰';
-});
-mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mnav.classList.remove('open');menuBtn.setAttribute('aria-expanded',false);menuBtn.textContent='☰';});});
-
-/* ---------- MAGNETIC CTA + STAT TILT ---------- */
-var cta=document.getElementById('build-cta');
-if(!isTouch && !reduceMotion){
-  cta.addEventListener('mousemove',function(e){
-    var r=cta.getBoundingClientRect();
-    cta.style.transform='translate('+((e.clientX-r.left-r.width/2)*.25)+'px,'+((e.clientY-r.top-r.height/2)*.25)+'px)';
-  });
-  cta.addEventListener('mouseleave',function(){cta.style.transform='translate(0,0)';});
-  document.querySelectorAll('.stat-card').forEach(function(card){
-    card.addEventListener('mousemove',function(e){
-      var r=card.getBoundingClientRect();
-      var px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5;
-      card.style.transform='perspective(500px) rotateX('+(-py*8)+'deg) rotateY('+(px*8)+'deg)';
-    });
-    card.addEventListener('mouseleave',function(){card.style.transform='';});
-  });
-}
-
-/* ---------- CONTACT REVEAL ---------- */
-document.getElementById('build-cta').addEventListener('click',function(){
-  var reveal=document.getElementById('contact-reveal');
-  reveal.hidden=false;
-  reveal.querySelector('a').focus();
-});
-
-/* ---------- SCROLL REVEALS ---------- */
-if(window.gsap && window.ScrollTrigger){
-  gsap.registerPlugin(ScrollTrigger);
-  document.querySelectorAll('.reveal').forEach(function(el){
-    gsap.fromTo(el,{opacity:0,y:reduceMotion?0:28},{opacity:1,y:0,duration:reduceMotion?.01:.8,ease:'power3.out',
-      scrollTrigger:{trigger:el,start:'top 88%'}});
-  });
-}
-
-/* ---------- 3D BACKGROUND PARTICLES ---------- */
-if(window.THREE){
-  var canvas=document.getElementById('robot-canvas');
-  var scene=new THREE.Scene();
-  var camera=new THREE.PerspectiveCamera(42, canvas.clientWidth/canvas.clientHeight, .1, 100);
-  camera.position.set(0,.25,5.4);
-  var renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:true,alpha:true});
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
-  renderer.setSize(canvas.clientWidth,canvas.clientHeight);
-
-  var pCount = reduceMotion?0:(isMobile?90:340);
-  var positions=new Float32Array(pCount*3);
-  for(var i=0;i<pCount;i++){
-    positions[i*3]=(Math.random()-.5)*10;
-    positions[i*3+1]=(Math.random()-.5)*7;
-    positions[i*3+2]=(Math.random()-.5)*6-1;
-  }
-  var pGeo=new THREE.BufferGeometry(); pGeo.setAttribute('position',new THREE.BufferAttribute(positions,3));
-  var pMat=new THREE.PointsMaterial({size:.035,color:0x8899ff,transparent:true,opacity:.55,blending:THREE.AdditiveBlending,depthWrite:false});
-  var particles=new THREE.Points(pGeo,pMat); scene.add(particles);
-
-  var clock=new THREE.Clock();
-  function animate(){
-    requestAnimationFrame(animate);
-    var t=clock.getElapsedTime();
-    if(!reduceMotion){
-      camera.position.x=Math.sin(t*.15)*.15;
-      camera.position.y=.25+Math.cos(t*.2)*.05;
-      camera.lookAt(isMobile?0:0.7,-.1,0);
-      particles.rotation.y=t*.02;
-    }
-    renderer.render(scene,camera);
-  }
-  animate();
-
-  window.addEventListener('resize',function(){
-    isMobile = window.innerWidth<860;
-    camera.aspect=canvas.clientWidth/canvas.clientHeight; camera.updateProjectionMatrix();
-    renderer.setSize(canvas.clientWidth,canvas.clientHeight);
-  });
-}
-
-})();
-</script>
+<script src="main.js"></script>
 </body>
 </html>

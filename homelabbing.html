@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Home Labing — Vaibhav Raj (Vaybhav)</title>
+<meta name="description" content="Vaibhav Raj's personal home lab: self-hosted servers, Docker containers, networking setup, hardware specs, and 24/7 infrastructure.">
+<meta name="keywords" content="Vaibhav Raj homelab, home labing, self-hosting, Docker, Proxmox, Linux server, Pi-hole, Cloudflare tunnels">
+<meta name="author" content="Vaibhav Raj">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vaibhavraj.placeholder.com/homelabbing.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/jpeg" href="icon.jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="lock">
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="loader"><div class="l-text">CONNECTING TO HOME LAB...</div><div class="l-bar"><div class="l-fill"></div></div></div>
+<div id="cursor-dot"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<!-- HUD Primary Nav -->
+<nav id="hud-nav" aria-label="Primary Navigation">
+  <a href="index.html" class="brand">VAIBHAV</a>
+  <a href="index.html" class="nav-link"><span>01</span>~</a>
+  <a href="projects.html" class="nav-link"><span>02</span>PROJECTS</a>
+  <a href="works.html" class="nav-link"><span>03</span>WORKS</a>
+  <a href="blogs.html" class="nav-link"><span>04</span>BLOGS</a>
+  <a href="homelabbing.html" class="nav-link active"><span>05</span>HOME LABING</a>
+</nav>
+
+<!-- Mobile Nav & Brand -->
+<a href="index.html" id="mobile-brand">VAIBHAV</a>
+<button id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+<div id="mobile-nav">
+  <a href="index.html">~</a>
+  <a href="projects.html">Projects</a>
+  <a href="works.html">Works</a>
+  <a href="blogs.html">Blogs</a>
+  <a href="homelabbing.html" class="active">Home Labing</a>
+</div>
+
+<main id="main">
+  <!-- Subpage Header -->
+  <section class="subpage-hero" aria-label="Home Lab Header">
+    <div class="wrap">
+      <div class="eyebrow">
+        <span class="pulse-badge">
+          <span class="pulse-dot"></span>
+          LAB STATUS: 24/7 ONLINE · REPURPOSED NODE
+        </span>
+      </div>
+      <h1 class="reveal">My Laptop Home Lab.</h1>
+      <p class="reveal">
+        Running Oracle VirtualBox on an old Dell Inspiron laptop to host OpenMediaVault (OMV) and Plex. It's not a full-blown enterprise datacenter rack yet, but a practical 24/7 playground that I will scale over time.
+      </p>
+
+      <!-- Hardware Specs Grid -->
+      <div class="specs-grid reveal">
+        <div class="spec-card">
+          <span class="spec-icon">💻</span>
+          <span class="spec-label">Hardware Node</span>
+          <div class="spec-val">Dell Inspiron P51F</div>
+          <span class="mono" style="font-size:0.68rem;color:var(--ink-faint);display:block;margin-top:0.25rem;">Old Laptop as 24/7 Server</span>
+        </div>
+        <div class="spec-card">
+          <span class="spec-icon">🧠</span>
+          <span class="spec-label">Memory</span>
+          <div class="spec-val">12 GB RAM</div>
+          <span class="mono" style="font-size:0.68rem;color:var(--ink-faint);display:block;margin-top:0.25rem;">Virtualization Allocation</span>
+        </div>
+        <div class="spec-card">
+          <span class="spec-icon">💾</span>
+          <span class="spec-label">Storage</span>
+          <div class="spec-val">1 TB Storage</div>
+          <span class="mono" style="font-size:0.68rem;color:var(--ink-faint);display:block;margin-top:0.25rem;">Local NAS & Media Pool</span>
+        </div>
+        <div class="spec-card">
+          <span class="spec-icon">🔒</span>
+          <span class="spec-label">Network & Access</span>
+          <div class="spec-val">Tailscale Mesh VPN</div>
+          <span class="mono" style="font-size:0.68rem;color:var(--ink-faint);display:block;margin-top:0.25rem;">Dynamic-to-Static IP Mesh</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Self-Hosted Services Matrix -->
+  <section style="padding-top: 1rem;">
+    <div class="wrap">
+      <div class="section-label reveal">STACK & SERVICES</div>
+      <h2 class="reveal">What's running on the machine</h2>
+      <p class="reveal" style="color:var(--ink-dim);max-width:56ch;margin-top:0.6rem;">
+        Using Oracle VirtualBox to run virtual machines on top of the laptop, bridged with Tailscale to provide a permanent static IP for secure remote access.
+      </p>
+
+      <div class="services-grid">
+        
+        <!-- 1. OpenMediaVault (OMV) -->
+        <div class="service-card reveal">
+          <div>
+            <div class="service-header">
+              <div class="service-icon">🗄️</div>
+              <div class="service-title">
+                <h3>OpenMediaVault (OMV)</h3>
+                <span>NETWORK ATTACHED STORAGE (NAS)</span>
+              </div>
+            </div>
+            <p>
+              Debian-based NAS solution running in an Oracle VirtualBox VM. Manages storage partitions, user shares, SMB/CIFS network folders, and provides centralized file access across all devices on the home network.
+            </p>
+          </div>
+          <div class="service-footer">
+            <span class="service-tag">NAS System</span>
+            <span class="service-tag">Debian VM</span>
+            <span class="service-tag">SMB / CIFS Shares</span>
+            <span class="service-tag">Storage Management</span>
+          </div>
+        </div>
+
+        <!-- 2. Plex Media Server -->
+        <div class="service-card reveal">
+          <div>
+            <div class="service-header">
+              <div class="service-icon">🎬</div>
+              <div class="service-title">
+                <h3>Plex Media Server</h3>
+                <span>PERSONAL STREAMING HUB</span>
+              </div>
+            </div>
+            <p>
+              My personal Netflix alternative. Catalogs movies, shows, and downloaded media stored on the 1TB hard drive and streams them in high quality to smartphones, laptops, and TV on the local network without subscriptions.
+            </p>
+          </div>
+          <div class="service-footer">
+            <span class="service-tag">Plex Media</span>
+            <span class="service-tag">Direct Stream</span>
+            <span class="service-tag">Local LAN</span>
+            <span class="service-tag">Zero Subscriptions</span>
+          </div>
+        </div>
+
+        <!-- 3. Tailscale -->
+        <div class="service-card reveal">
+          <div>
+            <div class="service-header">
+              <div class="service-icon">🔒</div>
+              <div class="service-title">
+                <h3>Tailscale Mesh Network</h3>
+                <span>DYNAMIC-TO-STATIC IP & REMOTE ACCESS</span>
+              </div>
+            </div>
+            <p>
+              Home ISPs constantly change public IP addresses, which breaks remote connections. Tailscale solves this by creating a secure WireGuard mesh that converts my changing IP into a permanent, static private IP (MagicDNS). Lets me securely access OMV files and stream Plex from anywhere outside home without opening risky router ports or dealing with CGNAT.
+            </p>
+          </div>
+          <div class="service-footer">
+            <span class="service-tag">Tailscale</span>
+            <span class="service-tag">Static Private IP</span>
+            <span class="service-tag">WireGuard Mesh</span>
+            <span class="service-tag">Zero Port Forwarding</span>
+            <span class="service-tag">Remote Streaming</span>
+          </div>
+        </div>
+
+        <!-- 4. Oracle VirtualBox -->
+        <div class="service-card reveal">
+          <div>
+            <div class="service-header">
+              <div class="service-icon">📦</div>
+              <div class="service-title">
+                <h3>Oracle VirtualBox</h3>
+                <span>TYPE-2 HYPERVISOR</span>
+              </div>
+            </div>
+            <p>
+              Hosts the virtual machines with dedicated CPU core allocation and memory limits. Uses bridged network adapters so OMV and services get their own distinct local IP addresses directly from the router.
+            </p>
+          </div>
+          <div class="service-footer">
+            <span class="service-tag">Hypervisor</span>
+            <span class="service-tag">Bridged Adapter</span>
+            <span class="service-tag">Resource Limiting</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy & Roadmap -->
+  <section id="roadmap">
+    <div class="wrap">
+      <div class="section-label reveal">THE PHILOSOPHY</div>
+      <h2 class="reveal">Not a proper home lab, but a start.</h2>
+      
+      <div class="about-box reveal">
+        <div class="about-body">
+          <p>
+            You don't need a thousand-dollar server rack or enterprise equipment to start a home lab. A real homelab is about taking whatever hardware you have and building something useful with it.
+          </p>
+          <p>
+            My old <strong>Dell Inspiron P51F</strong> laptop (12GB RAM, 1TB storage) was sitting idle. Instead of letting it gather dust, I turned it into a quiet, power-efficient, 24/7 home server. One great hidden superpower of a laptop server: <strong>the laptop battery acts as a built-in UPS</strong> during brief power flickers!
+          </p>
+          <p>
+            Running <strong>OpenMediaVault</strong> and <strong>Plex</strong> inside <strong>Oracle VirtualBox</strong>, backed by <strong>Tailscale</strong> to convert my changing dynamic IP into a rock-solid static private IP, has taught me practical lessons on virtualization, mesh networking, storage pools, and Linux systems. It's not a proper enterprise homelab yet, but it solves my everyday storage & streaming needs — and <strong>I will scale this over time</strong>.
+          </p>
+        </div>
+
+        <!-- Upgrades roadmap -->
+        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+          <span class="mono" style="font-size:0.72rem;letter-spacing:0.1em;color:var(--purple);display:block;margin-bottom:0.8rem;">
+            SCALING ROADMAP · WHAT'S NEXT
+          </span>
+          <div style="display:flex;flex-wrap:wrap;gap:0.8rem;">
+            <span class="meta-tag">⚡ Dedicated Mini PC / SFF Node</span>
+            <span class="meta-tag">🐧 Migrate to Bare-Metal Proxmox VE</span>
+            <span class="meta-tag">🛡️ Pi-hole Network Ad-Blocker</span>
+            <span class="meta-tag">☁️ Cloudflare Tunnels (Remote Access)</span>
+            <span class="meta-tag">💾 Dedicated Multi-Drive RAID Pool</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-label reveal">CONNECT</div>
+      <h2 class="reveal">Fellow homelabber or hardware nerd?</h2>
+      <p class="reveal">I'd love to swap configs, talk networking, or discuss self-hosted stacks. Reach out!</p>
+      <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="mailto:work.vaibhav.2020@gmail.com" class="project-btn-primary">
+          EMAIL ME ↗
+        </a>
+        <a href="projects.html" class="project-btn-secondary">
+          EXPLORE PROJECTS →
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>
+    <strong>VAIBHAV RAJ (VAYBHAV)</strong><br>
+    19y/o Software Developer · Builder<br>
+    Patna, India
+  </div>
+  <div class="footer-nav">
+    <a href="index.html">~</a>
+    <a href="projects.html">Projects</a>
+    <a href="works.html">Works</a>
+    <a href="blogs.html">Blogs</a>
+    <a href="homelabbing.html">Home Labing</a>
+  </div>
+  <div>
+    <a href="https://github.com/afk-vaibhav" target="_blank" rel="noopener">GitHub</a> · 
+    <a href="https://instagram.com/vaybhav_7x" target="_blank" rel="noopener">Instagram</a> · 
+    <a href="https://x.com/vaybhav_7x" target="_blank" rel="noopener">X</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
